@@ -1,6 +1,7 @@
 import React from 'react'
 
-const TermsAndConditions = () => {
+const TermsAndConditions = ({ open, close }) => {
+  if (!open) return null;
   return (
     <div className='modal__overlay'>
       <div className='modal__container'>
@@ -12,7 +13,7 @@ const TermsAndConditions = () => {
             <h4>No one under the age of 16 will be allowed on the show floor.</h4>
           </div>
           <div className='btn__modal'>
-            <button className='btn__modal--exit'>Exit</button>
+            <button className='btn__modal--exit' onClick={(e) => close(e)}>Exit</button>
           </div>
         </div>
       </div>
