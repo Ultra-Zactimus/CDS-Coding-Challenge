@@ -10,6 +10,7 @@ const Email = ({ email, submitValue }) => {
           autoComplete='off'
           maxLength={50}
           onChange={(e) => submitValue(e)}
+          className="email"
           pattern="[^@]+@[^@]+\.[^@]+"
           value={email}
           required
