@@ -168,7 +168,7 @@ const Form = () => {
         </div>
 
         <TermsAndConditions open={modalStatus} close={setModalStatus} />
-        <button type='submit'>Submit</button>
+        <button type='submit'  className='btn__form'>Submit</button>
       </form>
     </main>
   )
