@@ -1,8 +1,22 @@
-import React from 'react'
 
-const Email = () => {
+const Email = ({ email, submitValue }) => {
   return (
-    <div>Email</div>
+    <>
+      <div>
+        <input
+          type='text'
+          name="email"
+          placeholder="Enter a valid Email Address"
+          autoComplete='off'
+          maxLength={50}
+          onChange={(e) => submitValue(e)}
+          pattern="[^@]+@[^@]+\.[^@]+"
+          value={email}
+          required
+        />
+      </div>
+      <p>Email is required for Confirmation Email</p>
+    </>
   )
 }
 
