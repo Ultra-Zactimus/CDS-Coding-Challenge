@@ -102,19 +102,22 @@ const Form = () => {
   }
 
   return (
-    <main>
-      {showSuccessMessage ? <h1>Thank you for your submission</h1> : <></>}
-      <p>* fields are required</p>
+    <main className='form'>
+      {showSuccessMessage 
+        ? <h1 className='form__message--success'>Thank you for your submission</h1> 
+        : <></>}
+      <p className='form__message--required'>* fields are required</p>
+
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div>
-          <label htmlFor="firstName">
+        <div className='form__alignment--sections'>
+          <label htmlFor="firstName" className='form__message--label'>
             Enter Your First Name
-            <span>*</span>
+            <span className="form__attention--required">*</span>
           </label>
           <FirstName firstName={formData.firstName} submitValue={handleFirstName} />
         </div>
 
-        <div>
+        <div className='form__alignment--sections'>
           <label htmlFor="lastName">
             Enter Your Last Name
             <span>*</span>
@@ -122,7 +125,7 @@ const Form = () => {
           <LastName lastName={formData.lastName} submitValue={handleLastName} />
         </div>
 
-        <div>
+        <div className='form__alignment--sections'>
           <label htmlFor="phone">
             Enter Your Telephone Number
             <span>*</span>
@@ -130,7 +133,7 @@ const Form = () => {
           <Phone phoneNumber={formData.phoneNumber} submitValue={handlePhone} />
         </div>
 
-        <div>
+        <div className='form__alignment--sections'>
           <label htmlFor="email">
             Enter a Valid Email Address
             <span>*</span>
@@ -138,7 +141,7 @@ const Form = () => {
           <Email email={formData.email} submitValue={handleEmail} />
         </div>
 
-        <div>
+        <div className='form__alignment--sections'>
           <label htmlFor="promo">
             Enter Your Promo Code
             <span>*</span>
@@ -146,7 +149,7 @@ const Form = () => {
           <Promo promo={formData.promo} submitValue={handlePromo} />
         </div>
 
-        <div>
+        <div className='form__alignment--sections'>
           <label htmlFor="referral">
             How Did You Hear About Us?
             <span>*</span>
@@ -159,12 +162,12 @@ const Form = () => {
           />
         </div>
 
-        <div>
-          <label htmlFor="terms">
+        <div className='form__checkbox--alignment'>
+          <label htmlFor="terms" className='form__checkbox--text'>
             I agree to the <a href='' onClick={(e) => handleModal(e)} >Terms and Conditions</a> of this event
-            <span>*</span>
+            <span className='form__input--required'>*</span>
           </label>
-          <input type="checkbox" name="terms" required />
+          <input type="checkbox" name="terms" className='form__checkbox' required />
         </div>
 
         <TermsAndConditions open={modalStatus} close={setModalStatus} />
