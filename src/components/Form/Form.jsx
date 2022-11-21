@@ -52,6 +52,11 @@ const Form = () => {
     setFormData({ phoneNumber: formattedNumber });
   };
 
+  const handleEmail = e => {
+    const emailInput = e.target.value;
+    setFormData({ email: emailInput })
+  };
+
   return (
     <main>
 
@@ -78,7 +83,7 @@ const Form = () => {
             Enter Your Telephone Number
             <span>*</span>
           </label>
-          <Phone submitValue={handlePhone} />
+          <Phone phoneNumber={formData.phoneNumber} submitValue={handlePhone} />
         </div>
 
         <div>
@@ -86,7 +91,7 @@ const Form = () => {
             Enter a Valid Email Address
             <span>*</span>
           </label>
-          <Email email={formData.email} />
+          <Email email={formData.email} submitValue={handleEmail} />
         </div>
 
         <div>
