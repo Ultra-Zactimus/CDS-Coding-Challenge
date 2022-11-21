@@ -59,6 +59,12 @@
     }
   }
 
+  &__email--required {
+    color: #ff0000;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+  }
+
   &__input,
   &__select {
     height: 40px;
