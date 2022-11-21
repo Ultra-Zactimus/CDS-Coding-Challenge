@@ -13,7 +13,7 @@ const TermsAndConditions = ({ open, close }) => {
             <h4>No one under the age of 16 will be allowed on the show floor.</h4>
           </div>
           <div className='btn__modal'>
-            <button className='btn__modal--exit' onClick={(e) => close(e)}>Exit</button>
+            <button className='btn__modal--exit' onClick={() => close(false)}>Exit</button>
           </div>
         </div>
       </div>
