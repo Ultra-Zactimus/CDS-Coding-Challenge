@@ -21,6 +21,8 @@ const Form = () => {
 
   return (
     <main>
+
+      <p>* fields are required</p>
       <form>
         <div>
           <label htmlFor="firstName">
