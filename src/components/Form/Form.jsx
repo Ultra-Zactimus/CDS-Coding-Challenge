@@ -142,6 +142,14 @@ const Form = () => {
         </div>
 
         <div className='form__alignment--sections'>
+        {formData.promo !== ''
+            ? <label htmlFor="promo" className='form__message--label'>
+                Enter Your Promo Code
+                <span className="form__attention--required">*</span>
+              </label>
+            : <label htmlFor="promo" className='form__message--label'>
+                Enter Your Promo Code
+              </label>}
           <label htmlFor="promo">
             Enter Your Promo Code
             <span>*</span>
@@ -150,16 +158,48 @@ const Form = () => {
         </div>
 
         <div className='form__alignment--sections'>
-          <label htmlFor="referral">
-            How Did You Hear About Us?
-            <span>*</span>
-          </label>
-          <Referral 
-            referral={formData.referral} 
-            submitValue={handleReferral} 
-            other={formData.other} 
-            submitFeedback={handleOther} 
-          />
+        {formData.promo === ''
+        ? <>
+            <label htmlFor="referral" className='form__message--label'>
+              How Did You Hear About Us? 
+              <span className="form__attention--required">*</span>
+            </label>
+            <Referral 
+              handleReferral={handleReferral} 
+              referral={formData.referral}
+            />
+          </>
+        : <>
+            <label htmlFor="referral" className='form__message--label'>
+              How Did You Hear About Us? 
+            </label>
+            <div className='form__alignment'>
+              <select 
+                name="referral" 
+                value={formData.referral} 
+                onChange={(e) => handleReferral(e)}
+                className='form__select'
+              >
+                <option></option>
+                <option name="socialMedia" value="socialMedia">Social Media</option>
+                <option name="friend" value="friend">A Friend</option>
+                <option name="email" value="email">By Email</option>
+                <option name="other" value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="other" className='form__message--label'>
+                Please Specify 
+              </label>
+              <div className='form__alignment'>
+                <textarea 
+                  name="other" 
+                  id="other"
+                  className='form__textarea' 
+                ></textarea>
+              </div>
+            </div>
+          </>}
         </div>
 
         <div className='form__checkbox--alignment'>
