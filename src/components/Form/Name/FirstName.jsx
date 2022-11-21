@@ -8,7 +8,8 @@ const FirstName = ({ firstName, submitValue }) => {
           maxLength={30} 
           name="firstName"
           value={firstName}
-          placeholder='Enter your First name' 
+          placeholder='Enter your First name'
+          className="name"
           onChange={(e) => submitValue(e)} 
           required 
         />

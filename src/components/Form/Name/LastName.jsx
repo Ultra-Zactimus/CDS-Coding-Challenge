@@ -10,6 +10,7 @@ const LastName = ({ lastName, submitValue }) => {
           value={lastName}
           placeholder='Enter your Last name' 
           onChange={(e) => submitValue(e)}
+          className="name"
           required 
         />
       </div>
