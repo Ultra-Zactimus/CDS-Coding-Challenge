@@ -187,7 +187,8 @@ const Form = () => {
                 <option name="other" value="other">Other</option>
               </select>
             </div>
-            <div>
+
+            <div className='form__alignment--sections'>
               <label htmlFor="other" className='form__message--label'>
                 Please Specify 
               </label>
