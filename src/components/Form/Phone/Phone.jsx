@@ -1,8 +1,20 @@
 import React from 'react'
 
-const Phone = () => {
+const Phone = ({ phoneNumber, submitValue }) => {
   return (
-    <div>Phone</div>
+    <>
+      <div>
+        <input 
+          value={phoneNumber} 
+          name="telephone"
+          placeholder="Enter your Telephone number" 
+          maxLength={30}
+          autoComplete='on' 
+          onChange={(e) => submitValue(e)}
+          required
+        />
+      </div>
+    </>
   )
 }
 
