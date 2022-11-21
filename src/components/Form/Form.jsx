@@ -149,7 +149,7 @@ const Form = () => {
           <input type="checkbox" name="terms" required />
         </div>
 
-        <TermsAndConditions />
+        <TermsAndConditions open={modalStatus} close={setModalStatus} />
         <button type='submit'>Submit</button>
       </form>
     </main>
