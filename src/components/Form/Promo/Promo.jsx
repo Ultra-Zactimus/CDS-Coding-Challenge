@@ -2,7 +2,7 @@
 const Promo = ({ promo, submitValue }) => {
   return (
     <>
-      <div>
+      <div className='form__alignment'>
         <input 
           type="text" 
           maxLength={7} 
@@ -10,6 +10,7 @@ const Promo = ({ promo, submitValue }) => {
           placeholder='Enter a promo code'
           value={promo}
           onChange={(e) => submitValue(e)}
+          className="form__input"
         />
       </div>
     </>
