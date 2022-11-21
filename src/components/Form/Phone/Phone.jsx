@@ -3,7 +3,7 @@ import React from 'react'
 const Phone = ({ phoneNumber, submitValue }) => {
   return (
     <>
-      <div>
+      <div className='form__alignment'>
         <input 
           value={phoneNumber} 
           name="telephone"
@@ -11,6 +11,7 @@ const Phone = ({ phoneNumber, submitValue }) => {
           maxLength={30}
           autoComplete='on' 
           onChange={(e) => submitValue(e)}
+          className="form__input"
           required
         />
       </div>
