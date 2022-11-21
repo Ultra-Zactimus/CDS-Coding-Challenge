@@ -19,6 +19,16 @@ const Form = () => {
     referral: ''
   });
 
+  const handleFirstName = e => {
+    const firstName = e.target.value;
+    setFormData({ firstName: firstName });
+  };
+
+  const handleLastName = e => {
+    const lastName = e.target.value;
+    setFormData({ lastName: lastName });
+  };
+
   return (
     <main>
 
@@ -29,7 +39,7 @@ const Form = () => {
             Enter your First Name
             <span>*</span>
           </label>
-          <FirstName firstName={formData.firstName} />
+          <FirstName firstName={formData.firstName} submitValue={handleFirstName} />
         </div>
 
         <div>
@@ -37,7 +47,7 @@ const Form = () => {
             Enter Your Last Name
             <span>*</span>
           </label>
-          <LastName lastName={formData.lastName} />
+          <LastName lastName={formData.lastName} submitValue={handleLastName} />
         </div>
 
         <div>
