@@ -10,14 +10,17 @@ import {
 
 const Form = () => {
   return (
-    <div>
-      <Name />
-      <Phone />
-      <Email />
-      <Promo />
-      <Referral />
-      <TermsAndConditions />
-    </div>
+    <main>
+      <form>
+        <Name />
+        <Phone />
+        <Email />
+        <Promo />
+        <Referral />
+        <TermsAndConditions />
+        <button>Submit</button>
+      </form>
+    </main>
   )
 }
 
