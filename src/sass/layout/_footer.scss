@@ -1,0 +1,14 @@
+.footer {
+  background-color: #313131;
+  color: #ffff;
+  padding: 1.5rem;
+  font-size: 18px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  &__link {
+    color: #4d4dff;
+  }
+}
