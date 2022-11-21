@@ -1,0 +1,42 @@
+.btn {
+  &__form {
+    padding: 1.2rem;
+    padding-inline: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: #0256af;
+    font-size: large;
+    color: #ffff;
+    box-shadow: -2px 6px 10px 0.1px #676767;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #3b71e6;
+    }
+  }
+
+  &__modal {
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  
+    &--exit {
+      padding: 1rem;
+      padding-inline: 2rem;
+      background-color: #00b500;
+      font-size:larger;
+      color: #ffffff;
+      border: 2px solid #1d7b01;
+      border-radius: 0.5rem;
+  
+      &:hover {
+        cursor: pointer;
+        background-color: #00d200;
+      }
+    }
+  }
+}
