@@ -120,7 +120,7 @@ const Form = () => {
         <div className='form__alignment--sections'>
           <label htmlFor="lastName">
             Enter Your Last Name
-            <span>*</span>
+            <span className="form__attention--required">*</span>
           </label>
           <LastName lastName={formData.lastName} submitValue={handleLastName} />
         </div>
@@ -128,7 +128,7 @@ const Form = () => {
         <div className='form__alignment--sections'>
           <label htmlFor="phone">
             Enter Your Telephone Number
-            <span>*</span>
+            <span className="form__attention--required">*</span>
           </label>
           <Phone phoneNumber={formData.phoneNumber} submitValue={handlePhone} />
         </div>
@@ -136,24 +136,20 @@ const Form = () => {
         <div className='form__alignment--sections'>
           <label htmlFor="email">
             Enter a Valid Email Address
-            <span>*</span>
+            <span className="form__attention--required">*</span>
           </label>
           <Email email={formData.email} submitValue={handleEmail} />
         </div>
 
         <div className='form__alignment--sections'>
-        {formData.promo !== ''
-            ? <label htmlFor="promo" className='form__message--label'>
-                Enter Your Promo Code
-                <span className="form__attention--required">*</span>
-              </label>
-            : <label htmlFor="promo" className='form__message--label'>
-                Enter Your Promo Code
-              </label>}
-          <label htmlFor="promo">
-            Enter Your Promo Code
-            <span>*</span>
-          </label>
+          {formData.promo !== ''
+          ? <label htmlFor="promo" className='form__message--label'>
+              Enter Your Promo Code
+              <span className="form__attention--required">*</span>
+            </label>
+          : <label htmlFor="promo" className='form__message--label'>
+              Enter Your Promo Code
+            </label>}
           <Promo promo={formData.promo} submitValue={handlePromo} />
         </div>
 
@@ -165,8 +161,10 @@ const Form = () => {
               <span className="form__attention--required">*</span>
             </label>
             <Referral 
-              handleReferral={handleReferral} 
+              submitValue={handleReferral} 
               referral={formData.referral}
+              submitFeedback={handleOther}
+              other={formData.other}
             />
           </>
         : <>
