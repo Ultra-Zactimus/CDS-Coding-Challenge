@@ -84,14 +84,31 @@ const Form = () => {
     setModalOpen(true);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormData({
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+      email: '',
+      promo: '',
+      referral: '',
+      other: ''
+    });
+    setShowSuccessMessage(true);
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 3000);
+  }
+
   return (
     <main>
       {showSuccessMessage ? <h1>Thank you for your submission</h1> : <></>}
       <p>* fields are required</p>
-      <form>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <div>
           <label htmlFor="firstName">
-            Enter your First Name
+            Enter Your First Name
             <span>*</span>
           </label>
           <FirstName firstName={formData.firstName} submitValue={handleFirstName} />
