@@ -57,6 +57,11 @@ const Form = () => {
     setFormData({ email: emailInput })
   };
 
+  const handlePromo = e => {
+    const promoInput = e.target.value.replace(/[^a-z0-9]/gi, '');
+    setFormData({ promo: promoInput })
+  };
+
   return (
     <main>
 
@@ -99,7 +104,7 @@ const Form = () => {
             Enter Your Promo Code
             <span>*</span>
           </label>
-          <Promo promo={formData.promo} />
+          <Promo promo={formData.promo} submitValue={handlePromo} />
         </div>
 
         <div>
