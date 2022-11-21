@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  Name,
+  FirstName,
+  LastName,
   Phone,
   Email,
   Promo,
@@ -12,7 +13,8 @@ const Form = () => {
   return (
     <main>
       <form>
-        <Name />
+        <FirstName />
+        <LastName />
         <Phone />
         <Email />
         <Promo />
