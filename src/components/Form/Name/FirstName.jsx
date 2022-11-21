@@ -1,8 +1,19 @@
-import React from 'react'
 
-const FirstName = () => {
+const FirstName = ({ firstName, submitValue }) => {
   return (
-    <div>FirstName</div>
+    <>
+      <div>
+        <input 
+          type="text" 
+          maxLength={30} 
+          name="firstName"
+          value={firstName}
+          placeholder='Enter your First name' 
+          onChange={(e) => submitValue(e)} 
+          required 
+        />
+      </div>
+    </>
   )
 }
 
