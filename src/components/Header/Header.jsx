@@ -8,6 +8,7 @@ const Header = () => {
         alt="a picture of the cds building from afar"
         width={1500}
         height={300}
+        className='header__image'
       />
       <div className='header__title--container'>
         <h1 className='header__title'>Contact Details</h1>
