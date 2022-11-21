@@ -42,6 +42,8 @@
     &--required {
       margin-bottom: 1rem;
       color: #ff0000;
+      text-shadow: 0.5px 0.5px #242424;
+      font-weight: bold;
     }
   }
 
@@ -61,8 +63,9 @@
 
   &__email--required {
     color: #ff0000;
+    font-weight: bold;
     margin-bottom: 2rem;
-    text-decoration: underline;
+    text-shadow: 0.3px 0.4px #242424;
   }
 
   &__input,
