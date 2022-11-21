@@ -81,7 +81,7 @@ const Form = () => {
 
   const handleModal = e => {
     e.preventDefault();
-    setModalOpen(true);
+    setModalStatus(true);
   };
 
   const handleSubmit = (e) => {
