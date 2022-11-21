@@ -22,12 +22,12 @@ const Form = () => {
   return (
     <main>
       <form>
-        <FirstName />
-        <LastName />
-        <Phone />
-        <Email />
-        <Promo />
-        <Referral />
+        <FirstName firstName={formData.firstName} />
+        <LastName lastName={formData.lastName} />
+        <Phone phone={formData.phone} />
+        <Email email={formData.email} />
+        <Promo promo={formData.promo} />
+        <Referral referral={formData.referral} />
         <TermsAndConditions />
         <button>Submit</button>
       </form>
