@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import {
   FirstName,
   LastName,
@@ -10,6 +10,15 @@ import {
 } from './index';
 
 const Form = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    promo: '',
+    referral: ''
+  });
+
   return (
     <main>
       <form>
