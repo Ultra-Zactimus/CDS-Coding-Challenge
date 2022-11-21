@@ -10,6 +10,7 @@ import {
 } from './index';
 
 const Form = () => {
+  const [modalStatus, setModalStatus] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -75,6 +76,11 @@ const Form = () => {
       const other = e.target.value;
       setFormData({ other: other});
     }
+  };
+
+  const handleModal = e => {
+    e.preventDefault();
+    setModalOpen(true);
   };
 
   return (
