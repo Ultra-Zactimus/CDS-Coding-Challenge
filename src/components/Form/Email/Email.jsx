@@ -2,7 +2,7 @@
 const Email = ({ email, submitValue }) => {
   return (
     <>
-      <div>
+      <div className='form__alignment'>
         <input
           type='text'
           name="email"
@@ -10,13 +10,13 @@ const Email = ({ email, submitValue }) => {
           autoComplete='off'
           maxLength={50}
           onChange={(e) => submitValue(e)}
-          className="email"
+          className="email form__input"
           pattern="[^@]+@[^@]+\.[^@]+"
           value={email}
           required
         />
       </div>
-      <p>Email is required for Confirmation Email</p>
+      <p className="form__email--required">Email is required for Confirmation Email</p>
     </>
   )
 }
