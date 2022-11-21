@@ -29,6 +29,29 @@ const Form = () => {
     setFormData({ lastName: lastName });
   };
 
+  const formatPhoneNumber = value => {
+    if (!value) return value;
+  
+    const number = value.replace(/[^\d]/g, "");
+    const numberLength = number.length;
+  
+    if (numberLength < 4) return number;
+  
+    if (numberLength < 7) {
+      return `(${number.slice(0,3)}) ${number.slice(3)}`;
+    }
+  
+    return `(${number.slice(0, 3)}) ${number.slice(
+        3,
+        6,
+        )}-${number.slice(6, 10)}`;
+  };
+
+  const handlePhone = e => {
+    const formattedNumber = formatPhoneNumber(e.target.value);
+    setFormData({ phoneNumber: formattedNumber });
+  };
+
   return (
     <main>
 
@@ -55,7 +78,7 @@ const Form = () => {
             Enter Your Telephone Number
             <span>*</span>
           </label>
-          <Phone phone={formData.phone} />
+          <Phone submitValue={handlePhone} />
         </div>
 
         <div>
