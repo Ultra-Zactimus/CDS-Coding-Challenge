@@ -10,6 +10,7 @@ import {
 } from './index';
 
 const Form = () => {
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [modalStatus, setModalStatus] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -85,7 +86,7 @@ const Form = () => {
 
   return (
     <main>
-
+      {showSuccessMessage ? <h1>Thank you for your submission</h1> : <></>}
       <p>* fields are required</p>
       <form>
         <div>
