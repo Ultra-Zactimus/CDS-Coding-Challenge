@@ -143,7 +143,7 @@ const Form = () => {
 
         <div>
           <label htmlFor="terms">
-            I agree to the <a href=''>Terms and Conditions</a> of this event
+            I agree to the <a href='' onClick={(e) => handleModal(e)} >Terms and Conditions</a> of this event
             <span>*</span>
           </label>
           <input type="checkbox" name="terms" required />
