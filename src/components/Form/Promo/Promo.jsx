@@ -1,8 +1,18 @@
-import React from 'react'
 
-const Promo = () => {
+const Promo = ({ promo, submitValue }) => {
   return (
-    <div>Promo</div>
+    <>
+      <div>
+        <input 
+          type="text" 
+          maxLength={7} 
+          name="promo" 
+          placeholder='Enter a promo code'
+          value={promo}
+          onChange={(e) => submitValue(e)}
+        />
+      </div>
+    </>
   )
 }
 
