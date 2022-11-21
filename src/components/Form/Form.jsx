@@ -22,14 +22,55 @@ const Form = () => {
   return (
     <main>
       <form>
-        <FirstName firstName={formData.firstName} />
-        <LastName lastName={formData.lastName} />
-        <Phone phone={formData.phone} />
-        <Email email={formData.email} />
-        <Promo promo={formData.promo} />
-        <Referral referral={formData.referral} />
+        <div>
+          <label htmlFor="firstName">
+            Enter your First Name
+            <span>*</span>
+          </label>
+          <FirstName firstName={formData.firstName} />
+        </div>
+
+        <div>
+          <label htmlFor="lastName">
+            Enter Your Last Name
+            <span>*</span>
+          </label>
+          <LastName lastName={formData.lastName} />
+        </div>
+
+        <div>
+          <label htmlFor="phone">
+            Enter Your Telephone Number
+            <span>*</span>
+          </label>
+          <Phone phone={formData.phone} />
+        </div>
+
+        <div>
+          <label htmlFor="email">
+            Enter a Valid Email Address
+            <span>*</span>
+          </label>
+          <Email email={formData.email} />
+        </div>
+
+        <div>
+          <label htmlFor="promo">
+            Enter Your Promo Code
+            <span>*</span>
+          </label>
+          <Promo promo={formData.promo} />
+        </div>
+
+        <div>
+          <label htmlFor="referral">
+            How Did You Hear About Us?
+            <span>*</span>
+          </label>
+          <Referral referral={formData.referral} />
+        </div>
         <TermsAndConditions />
-        <button>Submit</button>
+        <button type='submit'>Submit</button>
       </form>
     </main>
   )
