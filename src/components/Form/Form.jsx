@@ -16,7 +16,8 @@ const Form = () => {
     phone: '',
     email: '',
     promo: '',
-    referral: ''
+    referral: '',
+    other: ''
   });
 
   const handleFirstName = e => {
@@ -60,6 +61,20 @@ const Form = () => {
   const handlePromo = e => {
     const promoInput = e.target.value.replace(/[^a-z0-9]/gi, '');
     setFormData({ promo: promoInput })
+  };
+
+  const handleReferral = e => {
+    if (!formData.promo) {
+      const referredBy = e.target.value;
+      setFormData({ referral: referredBy });
+    }
+  };
+
+  const handleOther = e => {
+    if (formData.referral === 'other') {
+      const other = e.target.value;
+      setFormData({ other: other});
+    }
   };
 
   return (
@@ -112,7 +127,12 @@ const Form = () => {
             How Did You Hear About Us?
             <span>*</span>
           </label>
-          <Referral referral={formData.referral} />
+          <Referral 
+            referral={formData.referral} 
+            submitValue={handleReferral} 
+            other={formData.other} 
+            submitFeedback={handleOther} 
+          />
         </div>
         <TermsAndConditions />
         <button type='submit'>Submit</button>
