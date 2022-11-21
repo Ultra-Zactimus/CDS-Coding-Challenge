@@ -2,7 +2,7 @@
 const LastName = ({ lastName, submitValue }) => {
   return (
     <>
-      <div>
+      <div className='form__alignment'>
         <input 
           type="text" 
           maxLength={30} 
@@ -10,7 +10,7 @@ const LastName = ({ lastName, submitValue }) => {
           value={lastName}
           placeholder='Enter your Last name' 
           onChange={(e) => submitValue(e)}
-          className="name"
+          className="name form__input"
           required 
         />
       </div>
