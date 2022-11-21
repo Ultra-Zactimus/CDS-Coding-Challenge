@@ -134,6 +134,15 @@ const Form = () => {
             submitFeedback={handleOther} 
           />
         </div>
+
+        <div>
+          <label htmlFor="terms">
+            I agree to the <a href=''>Terms and Conditions</a> of this event
+            <span>*</span>
+          </label>
+          <input type="checkbox" name="terms" required />
+        </div>
+
         <TermsAndConditions />
         <button type='submit'>Submit</button>
       </form>
